@@ -11,16 +11,16 @@ this.max=max;
     }
   
     guess() {
-      return Math.round(this.max-this.min)/2;
+      return Math.round((this.max-this.min)/2);
     }
 
     lower() {
-  return this.max=(this.max-this.min)/2-1;
+  return this.max=Math.round((this.max-this.min)/2);
     }
 
     greater() {
- 
- return this.min=-this.min;
+
+ return this.min=-Math.round((this.max-this.min)/2);
     }
 }
 
