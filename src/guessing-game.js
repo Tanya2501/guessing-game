@@ -1,33 +1,26 @@
 class GuessingGame {
     constructor() {
-      var result;
-      var number;
+      this.number=null;
+      this.min=null;
+      this.max=null;
     }
 
     setRange(min, max) {
-      var min=min;
-      var max=max;
-var average=guess (min,max);
-while(average!==number){
-if (number<average){
-lower(min, average);
-      }
-      else if (number>average){
-        greater(average, max);
-      }
+this.min=min;
+this.max=max;
     }
-    }
-
+  
     guess() {
-      return (max-min)/2;
+      return Math.round(this.max-this.min)/2;
     }
 
     lower() {
-setRange(min, average);
+  return this.max=(this.max-this.min)/2-1;
     }
 
     greater() {
-setRange(-min, average);
+ 
+ return this.min=-this.min;
     }
 }
 
